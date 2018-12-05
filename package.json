@@ -1,7 +1,7 @@
 {
   "name": "fun-portal",
   "version": "0.0.1",
-  "description": "Gomoku Brain Battle Portal",
+  "description": "Reversi Brain Battle Portal",
   "private": true,
   "license": "AGPL-1.0",
   "scripts": {

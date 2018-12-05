@@ -18,7 +18,7 @@ process.env.SUPPRESS_NO_CONFIG_WARNING = true;
     return;
   }
 
-  process.title = 'GomokuPortal';
+  process.title = 'ReversiPortal';
 
   let envProfile = 'debug';
   try {

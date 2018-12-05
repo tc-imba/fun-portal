@@ -22,9 +22,9 @@ export default class GomokuBoard {
         }
         tBody += '<div class="content" layout="row center-center">';
         if (isHeadingRow && !isHeadingCol) {
-          tBody += String(col - 1);
+          tBody += String(String.fromCharCode('a'.charCodeAt() + col - 1));
         } else if (!isHeadingRow && isHeadingCol) {
-          tBody += String(row - 1);
+          tBody += String(row);
         } else if (!isHeadingRow && !isHeadingCol) {
           tBody += `<div class="stone pos-${col - 1}-${row - 1}" data-field="0" data-order="" layout="row center-center"></div>`;
         }

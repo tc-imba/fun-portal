@@ -1,0 +1,13 @@
+{
+  "timestamp": "2018-12-06T04:00:00+08:00",
+  "version": "1.0.0",
+  "publisher": "tc-imba",
+  "log": [
+    {
+      "type": "features",
+      "data": [
+        "forked from fun-portal"
+      ]
+    }
+  ]
+}

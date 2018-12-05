@@ -219,6 +219,7 @@ export default class Handler {
       throw new errors.UserError('Round not found');
     }
     const rdoc = mdoc.rounds[rdocIndex];
+    console.log(rdoc);
     res.render('round_detail', {
       page_title: 'Round Detail',
       mdoc,

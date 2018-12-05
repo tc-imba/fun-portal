@@ -1,5 +1,5 @@
 base:
-  db: mongodb://localhost/portal
+  db: mongodb://localhost/reversi-portal
   redis: redis://localhost
   secret: your_secret
   displayPort: false
@@ -31,9 +31,6 @@ base:
       clang++11:    LLVM / Clang 5.0.0 (-O3 -std=c++11)
       clang++14:    LLVM / Clang 5.0.0 (-O3 -std=c++14)
       clang++17:    LLVM / Clang 5.0.0 (-O3 -std=c++17)
-      python2:      Python 2.7.14
-      python3:      Python 3.6.3
-      node.js:      Node.js 9.11.1
     limits:
       sizeOfCode: 1048576     # 1 MB
       sizeOfBin: 1048576      # 1 MB
@@ -43,40 +40,15 @@ base:
       maxExecQuota: 36000000  # 10 hours
   match:
     rules:
-      moveTimeout: 5000       # 5 s
+      moveTimeout: 1000       # 5 s
       roundTimeout: 180000    # 180 s
       memoryLimit: 367001600  # 350 MB
-      width: 15
-      height: 15
+      width: 8
+      height: 8
       winningStones: 5
-    rounds: 3
+    rounds: 1
     openings:
       - opening1
-      - opening2
-      - opening3
-      - opening4
-      - opening5
-      - opening6
-      - opening7
-      - opening8
-      - opening9
-      - opening10
-      - opening11
-      - opening12
-      - opening13
-      - opening14
-      - opening15
-      - opening16
-      - opening17
-      - opening18
-      - opening19
-      - opening20
-      - opening21
-      - opening22
-      - opening23
-      - opening24
-      - opening25
-      - opening26
   profiling:
     eventBus: false
     addMatches: false
@@ -88,13 +60,13 @@ base:
           user: guest
           password: guest
         queues:
-          - gomoku_compile
-          - gomoku_judge
+          - reversi_compile
+          - reversi_judge
         publications:
           compile:
-            queue: gomoku_compile
+            queue: reversi_compile
           judge:
-            queue: gomoku_judge
+            queue: reversi_judge
   jaccount:
     client_id: # fill in your SJTU OAuth2 ID
     client_secret: #fill in your SJTU OAuth2 secret
