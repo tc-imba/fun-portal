@@ -3,7 +3,7 @@ base:
   redis: redis://localhost
   secret: your_secret
   displayPort: false
-  port: 3000
+  port: 3100
   host: http://127.0.0.1
   cspReportUrl: /
   urlPrefix: ''

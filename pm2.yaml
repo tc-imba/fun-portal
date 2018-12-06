@@ -1,7 +1,7 @@
 # for PM2
 apps:
   - script: .dist/server.js
-    name: portal
+    name: reversi-portal
   - script: .dist/cli.js
     args: DI.match
-    name: makematch
+    name: reversi-makematch

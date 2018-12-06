@@ -50,6 +50,15 @@ export default class GomokuBoard {
   }
 
   setBoard(boardMap, orderMap = null) {
+    let orderDict = {};
+    orderMap.forEach((row, y) => {
+      row.forEach((v, x) => {
+        if (v > 0) {
+          orderDict[v] = {x, y};
+        }
+      });
+    });
+
     boardMap.forEach((row, y) => {
       row.forEach((v, x) => {
         const $cell = this.$cells[y][x];

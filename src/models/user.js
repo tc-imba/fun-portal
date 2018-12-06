@@ -450,8 +450,8 @@ export default () => {
       const d1 = new Date(first.updatedAt);
       const d2 = new Date();
       const diff = parseInt(d2 - d1);
-      if (diff < 1) {
-      // if (diff < 86400000) {
+      // if (diff < 1) {
+      if (diff < 86400000) {
         syserror = true;
         return [u1win, u2win, draw, syserror];
       }
