@@ -64,7 +64,8 @@
                 <span class="badge {{ udoc.badge.style }}">{{ udoc.badge.text }}</span>
               {%- endif %}
                 <a href="{{ url('/submission/user/{0}', false, [udoc._id]) }}">
-                  {{ [udoc.profile.displayName,udoc.rating.score]|player }}
+                  {{ [udoc.profile.displayName,udoc.rating.score]|player }}&nbsp;
+                  ({{ udoc.profile.teacher }})
                 </a>
               </div></td>
             {% if showDetail %}
