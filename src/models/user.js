@@ -504,12 +504,12 @@ export default () => {
       if (u1win === u2win) {
         const f1 = DI.models.Rating.getTitleData(u1.rating.score).factor;
         const f2 = DI.models.Rating.getTitleData(u2.rating.score).factor;
-        if (draw >= 2 && u2.delta <= f1 + f2) {
+        if (draw >= 1 && u2.delta <= f1 + f2) {
           continue;
         }
-      } else if (u1win - u2win >= 2 && u1.rating.score >= u2.rating.score) {
+      } else if (u1win - u2win >= 1 && u1.rating.score >= u2.rating.score) {
         continue;
-      } else if (u2win - u1win >= 2 && u2.rating.score >= u1.rating.score) {
+      } else if (u2win - u1win >= 1 && u2.rating.score >= u1.rating.score) {
         continue;
       }
       return await User.getUserObjectByIdAsync(u2._id);
