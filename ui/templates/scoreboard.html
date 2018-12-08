@@ -43,6 +43,7 @@
             <tr>
               <th class="col--rank">Rank</th>
               <th class="col--user">User</th>
+              <th class="col--teacher">Teacher</th>
             {% if showDetail %}
               <th class="col--student_id">Id</th>
               <th class="col--real_name">Name</th>
@@ -64,10 +65,12 @@
                 <span class="badge {{ udoc.badge.style }}">{{ udoc.badge.text }}</span>
               {%- endif %}
                 <a href="{{ url('/submission/user/{0}', false, [udoc._id]) }}">
-                  {{ [udoc.profile.displayName,udoc.rating.score]|player }}&nbsp;
-                  ({{ udoc.profile.teacher }})
+                  {{ [udoc.profile.displayName,udoc.rating.score]|player }}
                 </a>
               </div></td>
+              <td class="col--teacher">
+                {{ udoc.profile.teacher }}
+              </td>
             {% if showDetail %}
               <td class="col--student_id">
                 {{ udoc.profile.studentId }}
