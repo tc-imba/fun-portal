@@ -99,7 +99,10 @@ export default function() {
       }
     });
     if (!data) {
-      return DI.config.rating.unrated;
+      data = DI.config.rating.unrated;
+    }
+    if (typeof data.color === 'string') {
+      data.color = [data.color];
     }
     return data;
   };
