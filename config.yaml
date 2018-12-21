@@ -114,12 +114,12 @@ base:
         factor: 16
       -
         title: International Grandmaster
-        range: [2600, 2900]
+        range: [2600, 3000]
         color: red
         factor: 16
       -
         title: Legendary Grandmaster
-        range: [2900, Infinity]
+        range: [3000, Infinity]
         color: red
         factor: 16
     unrated:
